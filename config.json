@@ -1,0 +1,11 @@
+{
+  "apiBaseUrl": "https://dummy-api.com",
+  "auth": {
+    "method": "jwt",
+    "tokenExpiration": 3600
+  },
+  "features": {
+    "enableLogin": true,
+    "enableAdmin": true
+  }
+}
