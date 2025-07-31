@@ -1,10 +1,20 @@
 const express = require('express');
-const config = require('./config.json');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-const schemaName = config.schemas;
+// Read and parse the CONFIG_JSON environment variable
+const rawConfig = process.env.CONFIG_JSON || '{}';
+let config;
+
+try {
+  config = JSON.parse(rawConfig);
+} catch (err) {
+  console.error("❌ Failed to parse CONFIG_JSON:", err);
+  config = {};
+}
+
+const schemaName = config.schemas || 'Unknown';
 
 console.log(`🔧 Loaded schema: ${schemaName}`);
 
