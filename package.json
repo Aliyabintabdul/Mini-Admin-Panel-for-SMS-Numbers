@@ -33,11 +33,12 @@
     "web-vitals": "^4.2.3"
   },
   "scripts": {
+    "start": "node service.js",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "clean": "rm -rf node_modules/.cache && rm -rf build && rm -rf dist",
-    "start": "node service.js"
+    "clean": "rm -rf node_modules/.cache && rm -rf build && rm -rf dist"
+    
   },
   "eslintConfig": {
     "extends": [
