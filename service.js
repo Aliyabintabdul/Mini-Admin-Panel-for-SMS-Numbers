@@ -13,7 +13,7 @@ app.get('/config', (req, res) => {
   console.log("tokenExpiration:", config.auth.tokenExpiration);
   console.log("enableAdmin:", config.features?.enableAdmin);
 console.log("ENV VALUE:", process.env.MY_ENV_VAR);
-console.log("Loaded config:", require('../config.json'));
+console.log("Loaded config:", require('./config.json'));
 
   res.json(config);
 });
