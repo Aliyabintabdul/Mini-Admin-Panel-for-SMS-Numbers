@@ -9,3 +9,9 @@ app.get("/config", (req, res) => {
 
   res.json(config); // optional
 });
+
+// ✅ Add this AFTER all routes are defined:
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`✅ Server running on port ${port}`);
+});
